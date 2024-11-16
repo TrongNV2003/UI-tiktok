@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: var(--default-layout-width);
+    display: flex; // Hiển thị các phần tử con theo chiều ngang
+}
+
+.content {
+    flex: 1; // Vì sidebar chiếm 356px nên flex: 1 sẽ chiếm hết phần còn lại
+}
