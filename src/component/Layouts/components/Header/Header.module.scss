@@ -14,94 +14,66 @@
 .inner {
     height: 100%; //kế thừa từ thằng cha nên height 100% sẽ là 60px
     width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo {
-}
-
-.search,
-.search-result {
-    width: 361px;
-}
-
-.search {
-    position: relative;
-    height: var(--search-height);
-    padding-left: 16px;
+// Right button actions
+.actions {
     display: flex;
-    background-color: rgba(22, 24, 35, 0.06);
-    border-radius: var(--search-border-radius);
-    border: 1.5px solid transparent;
+    align-items: center;
+}
 
-    input {
-        flex: 1;
-        height: 100%;
-        color: var(--black);
-        font-size: 1.6rem;
-        caret-color: var(--primary);
-        background-color: transparent;
-    }
+.more-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    padding: 4px 8px;
+    background: transparent;
+    cursor: pointer;
+}
 
-    input:not(:placeholder-shown) ~ .search-btn {
-        //css ở input nhưng vẫn ảnh huong đến thằng search-btn
-        color: rgba(22, 24, 35, 0.75);
-    }
+.upload-btn {
+    color: var(--black);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    margin-right: 12px;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: var(--search-top-spacer);
-        right: var(--search-button-width);
-        width: 1px;
-        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
-        background-color: rgba(22, 24, 35, 0.12);
-    }
-
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.2);
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        border: 1px solid rgba(22, 24, 35, 0.12);
     }
 }
 
-.search-title {
-    padding: 5px 12px;
+.action-btn {
+    position: relative;
+    display: flex;
+    color: #161823;
+    background: transparent;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
     font-size: 1.4rem;
     font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
+    color: var(--white);
+    font-family: "ProximaNova", sans-serif;
+    background-color: var(--primary);
 }
 
-.clear,
-.loading {
-    position: absolute;
-    right: calc(var(--search-button-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
     cursor: pointer;
-    width: 16px;
-    height: 16px;
-    margin-right: 16px;
-    color: rgba(22, 24, 35, 0.34);
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.search-btn {
-    width: var(--search-button-width);
-    height: 100%;
-    border-top-right-radius: var(--search-border-radius);
-    border-bottom-right-radius: var(--search-border-radius);
-    font-size: 1.8rem;
-    color: rgba(22, 24, 35, 0.34);
-    &:hover {
-        cursor: pointer;
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-
-    &:active {
-        background-color: rgba(22, 24, 35, 0.06);
-    }
 }

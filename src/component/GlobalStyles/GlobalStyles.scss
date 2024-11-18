@@ -1,15 +1,15 @@
 @import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 
 :root {
     --primary: #fe2c55;
     --black: #000;
     --white: #fff;
-    --text-color: #333;
+    --text-color: #161823;
 
     // Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "ProximaNova", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -39,4 +39,48 @@ input,
 a[href] {
     text-decoration: none;
     color: var(--text-color);
+}
+
+// Font embedded
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/TikTokFont-Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/TikTokFont-Semibold.woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/TikTokFont-Bold.woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url("/assets/fonts/TikTokDisplayFont-Bold.woff2");
+    font-weight: 700;
+}
+
+// Custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-weight: 600;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
 }
