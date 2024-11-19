@@ -12,8 +12,10 @@ import {
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
+import { Link } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
 
+import routesConfig from "@app/config/routes";
 import Button from "@app/component/Button";
 import styles from "./Header.module.scss";
 import Menu from "@app/component/Popper/Menu";
@@ -94,7 +96,7 @@ function Header() {
     return (
         <header className={cx("wrapper")}>
             <div className={cx("inner")}>
-                <div className={cx("logo")}>
+                <Link to={routesConfig.home} className={cx("logo")}>
                     <svg xmlns="https://www.w3.org/2000/svg" height="42" width="118" alt="tiktok">
                         <g clipPath="url(#clip0)">
                             <path
@@ -131,7 +133,7 @@ function Header() {
                             ></path>
                         </g>
                     </svg>
-                </div>
+                </Link>
 
                 <Search />
 
