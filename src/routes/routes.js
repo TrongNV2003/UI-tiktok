@@ -7,11 +7,13 @@ import Following from "@app/pages/Following";
 import Profile from "@app/pages/Profile";
 import Upload from "@app/pages/Upload";
 import Search from "@app/pages/Search";
+import Live from "@app/pages/Live";
 
 // không cần đăng nhập vẫn xem đc
 const publicRoutes = [
     { path: config.routes.home, component: Home },
     { path: config.routes.following, component: Following },
+    { path: config.routes.live, component: Live },
     { path: config.routes.profile, component: Profile },
     { path: config.routes.upload, component: Upload, layout: HeaderOnly },
     { path: config.routes.search, component: Search, layout: null },
